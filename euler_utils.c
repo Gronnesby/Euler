@@ -1,6 +1,6 @@
 
 #include "euler_utils.h"
-
+#include <string.h>
 
 // Primality test using 6k+-1 optimization.
 int is_prime(long num)
@@ -23,4 +23,23 @@ int is_prime(long num)
         }
     } 
     return 1;
+}
+
+
+int mystrcmp(const void *a, const void *b)
+{
+    int cmp =  strcmp(*(const char **)a, *(const char **)b);
+
+    if (cmp < 0)
+    {
+        return -1;
+    }
+    else if (cmp > 0)
+    {
+        return 1;
+    } 
+    else 
+    {
+        return 0;
+    }
 }
