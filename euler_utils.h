@@ -5,7 +5,4 @@
 // Primality test using 6k+-1 optimization.
 int is_prime(long num);
 
-
-
-
 #endif
