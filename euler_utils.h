@@ -1,5 +1,5 @@
-#ifndef __EULER_H__
-#define __EULER_H__
+#ifndef __EULER_UTILS_H__
+#define __EULER_UTILS_H__
 
 
 // Primality test using 6k+-1 optimization.
@@ -25,5 +25,7 @@ unsigned int search_sequential(
     unsigned int start,
     unsigned int end);
 
+// Compare two strings, for use with qsort
+int mystrcmp(const void *a, const void *b);
 
 #endif

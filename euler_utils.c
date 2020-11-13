@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
+#include <string.h>
 
 #include "euler_utils.h"
-
 
 
 unsigned int search(
@@ -113,4 +113,23 @@ int is_prime(long num)
         }
     } 
     return 1;
+}
+
+
+int mystrcmp(const void *a, const void *b)
+{
+    int cmp =  strcmp(*(const char **)a, *(const char **)b);
+
+    if (cmp < 0)
+    {
+        return -1;
+    }
+    else if (cmp > 0)
+    {
+        return 1;
+    } 
+    else 
+    {
+        return 0;
+    }
 }
